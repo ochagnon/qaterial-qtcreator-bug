@@ -1,3 +1,4 @@
+#include <Qaterial/Qaterial.hpp>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -14,6 +15,10 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+
+    qaterial::loadQmlResources();
+    qaterial::registerQmlTypes();
+
     engine.load(url);
 
     return app.exec();

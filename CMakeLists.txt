@@ -2,6 +2,15 @@ cmake_minimum_required(VERSION 3.14)
 
 project(Test LANGUAGES CXX)
 
+include(FetchContent)
+FetchContent_Declare(
+  Qaterial
+  GIT_REPOSITORY https://github.com/OlivierLDff/Qaterial.git
+  GIT_TAG        master
+  GIT_SHALLOW    1
+)
+FetchContent_MakeAvailable(Qaterial)
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)

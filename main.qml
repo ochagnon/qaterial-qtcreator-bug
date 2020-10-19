@@ -1,9 +1,14 @@
-import QtQuick 2.10
-import QtQuick.Window 2.10
+import Qaterial 1.0 as Qaterial
 
-Window {
-    width: 640
-    height: 480
-    visible: true
-    title: qsTr("Hello World")
+Qaterial.ApplicationWindow
+{
+  width: 400
+  height: 200
+  visible: true
+
+  Qaterial.Label
+  {
+    text: 'Hello World'
+    anchors.centerIn: parent
+  }
 }
